@@ -15,15 +15,15 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "⚒ Source code", url="https://github.com/TheVaders/MusicBot"
+                        "⚒ Source code", url="https://github.com/raghuvanshithakur/vc_bot/edit/master/handlers/start.py"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/hellbot_official_chat"
+                        "💬 Group", url="https://t.me/mjsking786"
                     ),
                     InlineKeyboardButton(
-                        "Channel 🔈", url="https://t.me/hellbot_official"
+                        "Channel 🔈", url="https://t.me/joinchat/UrRD-aX2KYx7pEvW"
                     )
                 ],
                 [
