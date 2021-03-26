@@ -17,16 +17,4 @@ The commands I currently support are:
 ⚜️ /skip - __Skips the current Music Playing In Voice Chat.__
 ⚜️ /stop - __Clears The Queue as well as ends Voice Chat Music.__
         """,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Group 💬", url="https://t.me/hellbot_official_chat"
-                    ),
-                    InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/hellbot_official"
-                    )
-                ]
-            ]
-        )
-    )
+      
