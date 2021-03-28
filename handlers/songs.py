@@ -17,7 +17,7 @@ async def a(client, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = await message.reply_text('🔎 Searching the song...')
+    m = await message.reply("🔎 Searching the song...")
     ydl_opts = {"format": "bestaudio"}
     try:
         results = []
