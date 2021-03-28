@@ -18,7 +18,7 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     print(query)
     m = await message.reply_text('🔎 Searching the song...')
-    ydl_opts = {"format": "bestaudio[ext=m4a]"}
+    ydl_opts = {"format": "bestaudio"}
     try:
         results = []
         count = 0
@@ -46,8 +46,7 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            print(e)
-            m.edit('Found nothing. Try changing the spelling a little.')
+            m.edit(f"Found nothing. Try changing the spelling a little.\n\n`{e}`")
             return
     except Exception as e:
         m.edit(
@@ -69,8 +68,7 @@ async def a(client, message: Message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('❌ Error')
-        print(e)
+        m.edit(f"❌ Error!! \n\n`{e}`")
     try:
         os.remove(audio_file)
         os.remove(thumb_name)
