@@ -18,7 +18,25 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     print(query)
     m = await message.reply_text('🔎 Searching the song...')
-    ydl_opts = {"format": "bestaudio[ext=m4a]"}
+    ydl_opts = {
+            "format": "bestaudio",
+            "addmetadata": True,
+            "key": "FFmpegMetadata",
+            "writethumbnail": True,
+            "prefer_ffmpeg": True,
+            "geo_bypass": True,
+            "nocheckcertificate": True,
+            "postprocessors": [
+                {
+                    "key": "FFmpegExtractAudio",
+                    "preferredcodec": "mp3",
+                    "preferredquality": "320",
+                }
+            ],
+            "outtmpl": "%(id)s.mp3",
+            "quiet": True,
+            "logtostderr": False,
+    }
     try:
         results = []
         count = 0
