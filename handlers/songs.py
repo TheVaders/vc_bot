@@ -1,3 +1,5 @@
+import os
+
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 
@@ -5,9 +7,9 @@ import youtube_dl
 from youtube_search import YoutubeSearch
 import requests
 
-import os
+from config import BOT_NAME as Bn
 from helpers.filters import command, other_filters
-from helpers.wrappers import errors
+from helpers.decorators import errors
 
 @Client.on_message(command("song") & other_filters)
 @errors
@@ -16,7 +18,7 @@ async def a(client, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = await message.reply('ðŸ”Ž Searching the song...')
+    m = await message.reply(f"**{Bn} :-** 🔍 Searching for {query}")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -45,21 +47,21 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"Found nothing. Try changing the spelling a little.\n\n{e}")
+            m.edit(f"**{Bn} :-** 😕 Found nothing. Try changing the spelling a little.\n\n{e}")
             return
     except Exception as e:
         m.edit(
-            "âœ–ï¸ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+           f"**{Bn} :-** 😕 Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
         )
         print(str(e))
         return
-    await m.edit("â¬ Downloading.")
+    await m.edit(f"**{Bn} :-** 📥 Downloading...\n**Query :-** {query}")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'ðŸŽ§ Title: [{title[:35]}]({link})\nâ³ Duration: {duration}\nðŸ‘â€ðŸ—¨ Views: {views}'
+        rep = f'🎶 **Title:** [{title[:35]}]({link})\n⏳ **Duration:** {duration}\n👀 **Views:** {views}'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -67,7 +69,7 @@ async def a(client, message: Message):
         await  message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         await m.delete()
     except Exception as e:
-        m.edit(f"âŒ Error!! \n\n{e}")
+        m.edit(f"❌ Error!! \n\n{e}")
     try:
         os.remove(audio_file)
         os.remove(thumb_name)
