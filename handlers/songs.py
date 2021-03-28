@@ -12,12 +12,12 @@ from helpers.decorators import errors
 
 @Client.on_message(command("song") & other_filters)
 @errors
-def a(client, message):
+async def a(client, message: Message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = await message.reply('🔎 Searching the song...')
+    m = await message.reply_text('🔎 Searching the song...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
