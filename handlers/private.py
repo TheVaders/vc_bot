@@ -11,11 +11,11 @@ async def start(_, message: Message):
         f"""Selam ben **{bn}** !!
 Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 Kullanma kılavuzu:
-💠 /oynat - __Parçayı oynatmaya yarayan komut.__
-💠 /durdur - __Botu durdurmaya yarayan komut.__
-💠 /devamet - __Botu devam ettirmeye yarayan komut.__
-💠 /gec - __Diğer şarkıya geçmeye yarayan komut.__
-💠 /durdur - __Botu kapatır.__
+💠 /play - __Parçayı oynatmaya yarayan komut.__
+💠 /pause - __Botu durdurmaya yarayan komut.__
+💠 /resume - __Botu devam ettirmeye yarayan komut.__
+💠 /skip - __Diğer şarkıya geçmeye yarayan komut.__
+💠 /stop - __Botu kapatır.__
 🤖 **Developer by @Zep_Unb**
         """,
         reply_markup=InlineKeyboardMarkup(
