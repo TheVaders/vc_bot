@@ -17,8 +17,9 @@ async def a(client, message: Message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
-    print(query)
-    m = await message.reply(f"**{Bn} :-** 🔍 Searching for {query}")
+    okvai = query.capitalize()
+    print(query.capitalize())
+    m = await message.reply(f"**{Bn} :-** 🔍 Searching for {okvai}")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
