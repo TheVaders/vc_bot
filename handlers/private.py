@@ -12,6 +12,7 @@ async def start(_, message: Message):
 I let you play music in your group's voice chat 😉
 The commands I currently support are:
 ⚜️ /play - __Plays the replied audio file or YouTube video through link.__
+⚜️ /song - __Uploads the searched song in the chat.__
 ⚜️ /pause - __Pause Voice Chat Music.__
 ⚜️ /resume - __Resume Voice Chat Music.__
 ⚜️ /skip - __Skips the current Music Playing In Voice Chat.__
