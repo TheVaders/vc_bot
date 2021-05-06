@@ -20,13 +20,12 @@ from callsmusic import callsmusic, queues
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, Voice
 from pyrogram import Client
 
-pics = PLAY_PIC if PLAY_PIC else "https://telegra.ph/file/67592f9fad95997fce400.jpg"
-
 @Client.on_message(command("play") & other_filters)
 @errors
 async def play(_, message: Message):
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
     url = get_url(message)
+    pics = PLAY_PIC
     keyboard = InlineKeyboardMarkup(
             [
                 [
