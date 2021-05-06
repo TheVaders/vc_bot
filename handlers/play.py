@@ -27,6 +27,16 @@ pics = PLAY_PIC if PLAY_PIC else "https://telegra.ph/file/67592f9fad95997fce400.
 async def play(_, message: Message):
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
     url = get_url(message)
+    keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="Channel ⚜️",
+                        url="https://t.me/The_HellBot")
+                   
+                ]
+            ]
+        )
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
@@ -50,6 +60,7 @@ async def play(_, message: Message):
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo=pics,
+        reply_markup=keyboard,
         caption="▶️ Playing Song\nRequested By:-  {}!".format(
         message.from_user.mention()
         ),
