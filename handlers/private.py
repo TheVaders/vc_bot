@@ -15,7 +15,7 @@ from config import BOT_NAME as bn
 
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAEJvepgk9NVllCIKnQqpuzrHz-7-aZz1wACcwMAAqpWoFRNHP6VLvSJHx8E")
+    await message.reply_sticker("CAACAgEAAxkBAAEJvghgk9k6LOGd8zhnR2BuqVoWOfeILwACbQEAAsbVoERryjqEglU9ER8E")
     await message.reply_text(
         f"""I am **{bn}** !!
 I let you play music in your group's voice chat 😉
@@ -41,7 +41,7 @@ Enjoy Streaming Music 😉
 @Client.on_message(command("help") & other_filters2)
 async def helper(ok, message: Message):
     await message.reply_text(
-        f"""Hello! Following are the commands available for **{bn}** - __A Group Voice Chat Music Player__.
+        f"""💞 Hello! Following are the commands available for **{bn}** - __A Group Voice Chat Music Player__.
 
 The commands I currently support are:
 ⚜️ /play - **[ Groups Only ]** > __Plays the replied audio file or YouTube video through link.__
