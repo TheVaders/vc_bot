@@ -30,6 +30,10 @@
       "description": "List of user IDs counted as admin everywhere (separated by space).",
       "required": true
     },
+    "PLAY_PIC": {
+      "description": "Paste a telegraph link that you want to display when someone plays a song",
+      "required": false
+    },
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
