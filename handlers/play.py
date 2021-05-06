@@ -48,7 +48,12 @@ async def play(_, message: Message):
         await message.reply_text(f"**{bn} :-** 😉 Queued at position #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} !")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_text(f"**{bn} :-** 🥳 Playing...")
+        await message.reply_photo(
+        photo=pics,
+        caption="▶️ Playing Song\nRequested By:-  {}!".format(
+        message.from_user.mention()
+        ),
+    )
 
 
 @Client.on_message(command("ytplay") & other_filters)
