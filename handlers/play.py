@@ -8,7 +8,7 @@ import callsmusic
 import converter
 from downloaders import youtube
 
-from config import BOT_NAME as bn, DURATION_LIMIT
+from config import BOT_NAME as bn, DURATION_LIMIT, PLAY_PIC
 from helpers.filters import command, other_filters
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
@@ -20,6 +20,7 @@ from callsmusic import callsmusic, queues
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, Voice
 from pyrogram import Client
 
+pics = PLAY_PIC if PLAY_PIC else "https://telegra.ph/file/67592f9fad95997fce400.jpg"
 
 @Client.on_message(command("play") & other_filters)
 @errors
@@ -133,7 +134,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via YouTube Music 😜".format(
+        caption="▶️ **Playing** here the song requested by {}".format(
         message.from_user.mention()
         ),
     )
