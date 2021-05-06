@@ -50,7 +50,7 @@ The commands I currently support are:
 ⚜️ /pause - **[Groups Only ]** > __Pause Voice Chat Music.__
 ⚜️ /resume - **[Groups Only ]** > __Resume Voice Chat Music.__
 ⚜️ /skip - **[Groups Only ]** > __Skips the current Music Playing In Voice Chat.__
-⚜️ /stop - **[Groups Only ]** > __Clears The Queue as well as ends Voice Chat Music.__"""
+⚜️ /stop - **[Groups Only ]** > __Clears The Queue as well as ends Voice Chat Music.__""")
 
 
 @Client.on_message(command("song") & other_filters2)
