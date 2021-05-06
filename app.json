@@ -32,7 +32,8 @@
     },
     "PLAY_PIC": {
       "description": "Paste a telegraph link that you want to display when someone plays a song",
-      "required": false
+      "required": false,
+      "value": "https://telegra.ph/file/67592f9fad95997fce400.jpg"
     },
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
