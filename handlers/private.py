@@ -14,7 +14,7 @@ from config import BOT_NAME as bn
 
 
 @Client.on_message(command("help") & other_filters2)
-async def start(_, message: Message):
+async def start(ok, message: Message):
     await message.reply_text(
         f"""Hello! Following are the commands available for **{bn}** - __A Group Voice Chat Music Player__.
 
