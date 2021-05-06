@@ -14,7 +14,7 @@ from config import BOT_NAME as bn
 
 
 @Client.on_message(command("help") & other_filters2)
-async def start(ok, message: Message):
+async def helper(ok, message: Message):
     await message.reply_text(
         f"""Hello! Following are the commands available for **{bn}** - __A Group Voice Chat Music Player__.
 
@@ -25,8 +25,8 @@ The commands I currently support are:
 ⚜️ /pause - **[Groups Only ]** > __Pause Voice Chat Music.__
 ⚜️ /resume - **[Groups Only ]** > __Resume Voice Chat Music.__
 ⚜️ /skip - **[Groups Only ]** > __Skips the current Music Playing In Voice Chat.__
-⚜️ /stop - **[Groups Only ]** > __Clears The Queue as well as ends Voice Chat Music.__
-"""
+⚜️ /stop - **[Groups Only ]** > __Clears The Queue as well as ends Voice Chat Music.__"""
+
 
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
