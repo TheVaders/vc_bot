@@ -15,27 +15,24 @@ from config import BOT_NAME as bn, PLAY_PIC
 
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
-    await message.reply_sticker("CAACAgEAAxkBAAEJvghgk9k6LOGd8zhnR2BuqVoWOfeILwACbQEAAsbVoERryjqEglU9ER8E")
-    await message.reply_text(
-        f"""I am **{bn}** !!
-I let you play music in your group's voice chat 😉
-To get all commands and their explanation do /help
-
-Enjoy Streaming Music 😉
-""",
-        reply_markup=InlineKeyboardMarkup(
+    hell_pic = PLAY_PIC
+    hell = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
+    butts = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton(
-                        "Group 💬", url="https://t.me/Its_Fuckin_Hell"
-                    ),
-                    InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/The_HellBot"
-                    )
-                ]
+                InlineKeyboardButton(
+                    "Group 💬", url="https://t.me/Its_Fuckin_Hell"
+                ),
+                InlineKeyboardButton(
+                    "Channel 📣", url="https://t.me/The_HellBot"
+                )
             ]
-        )
+        ]
     )
+    await message.reply_photo(
+    photo=hell_pic,
+    caption=hell,
+)
 
 
 @Client.on_message(command("ping") & other_filters)
