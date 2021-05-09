@@ -3,7 +3,7 @@ from asyncio.queues import QueueEmpty
 from pyrogram import Client
 from pyrogram.types import Message
 
-import callsmusic
+from callsmusic import *
 
 from config import BOT_NAME as BN
 from helpers.filters import command, other_filters
