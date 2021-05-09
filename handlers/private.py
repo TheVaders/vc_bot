@@ -31,6 +31,7 @@ async def start(_, message: Message):
     )
     await message.reply_photo(
     photo=hell_pic,
+    reply_markup=butts,
     caption=hell,
 )
 
