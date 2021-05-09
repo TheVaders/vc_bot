@@ -70,7 +70,7 @@ async def skip(_, message: Message):
         else:
             callsmusic.pytgcalls.change_stream(
                 message.chat.id,
-                callsmusic.queues.get(message.chat.id)["file_path"]
+                callsmusic.queues.get(message.chat.id)["file"]
             )
 
         await message.reply_text(f"**{BN} :-** 😬 Skipped the current song!")
