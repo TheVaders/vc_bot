@@ -36,6 +36,32 @@ async def start(_, message: Message):
 )
 
 
+@Client.on_message(command("repo") & other_filters2)
+async def repo(_, message: Message):
+    await message.reply_text(
+        f"""🤠 Hoi!!
+I'm **{bn}** and below is the my source code 🙃
+
+Happy Streaming 😉
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Repo 📑", url="https://github.com/TheVaders/vc_bot"
+                    ),
+                    InlineKeyboardButton(
+                        "Channel 📣", url="https://t.me/The_HellBot"
+                    ),
+                    InlineKeyboardButton (
+                        "Tutorial 🎬", url="https://youtu.be/XaH7VHURBVg"
+                    )
+                ]
+            ]
+        )
+    )
+
+
 @Client.on_message(command("ping") & other_filters)
 async def ping(_, message: Message):
     hell_pic = PLAY_PIC
