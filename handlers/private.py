@@ -13,12 +13,12 @@ async def start(_, message: Message):
 Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 
 Kullanma kılavuzu:
-💠 /play - __Parçayı oynatmaya yarayan komut.__
-💠 /pause - __Botu durdurmaya yarayan komut.__
-💠 /resume - __Botu devam ettirmeye yarayan komut.__
-💠 /skip - __Diğer şarkıya geçmeye yarayan komut.__
-💠 /stop - __Botu kapatmaya yarayan komut.__
-
+💠 /play - __Parçayı oynatmaya yarar.__
+💠 /pause - __Botu durdurmaya yarar.__
+💠 /resume - __Botu devam ettirmeye yarar.__
+💠 /skip - __Diğer şarkıya geçmeye yarar.__
+💠 /stop - __Botu kapatmaya yarar.__
+💠 /song - __Şarkı aramaya yarar.__
 🤖 **Developer by @Zep_Unb**
         """,
         reply_markup=InlineKeyboardMarkup(
