@@ -19,7 +19,7 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     okvai = query.capitalize()
     print(query.capitalize())
-    m = await message.reply(f"**{Bn} :-** 🔍 Searching for {okvai}")
+    m = await message.reply(f"{okvai} Adlı parçayı arıyorum…")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -48,21 +48,21 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"**{Bn} :-** 😕 Found nothing. Try changing the spelling a little.\n\n{e}")
+            m.edit(f"Aradığın şarkıyı bulamadım abi özür dilerim😢\n\n{e}")
             return
     except Exception as e:
         m.edit(
-           f"**{Bn} :-** 😕 Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+           f"Aradığın şarkıyı bulamadım abi\n\nYazıyı değiştirerek tekrar dene."
         )
         print(str(e))
         return
-    await m.edit(f"**{Bn} :-** 📥 Downloading...\n**Query :-** {query}")
+    await m.edit(f"`{query}` Adlı parça yükleniyor…")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 **Title:** [{title[:35]}]({link})\n⏳ **Duration:** {duration}\n👀 **Views:** {views}'
+        rep = f'🎶 **İsim:** [{title[:35]}]({link})\n⏳ **Süre:** {duration}\n👀 **İzlenme:** {views}'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
