@@ -19,10 +19,10 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text(f"**{BN} :-** Durdurulacak bir şey bulamadım!")
+        await message.reply_text(f"Durdurulacak bir şey bulamadım abi")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** Müzik durduruldu!")
+        await message.reply_text(f"Müziği durdurdum reis")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -34,10 +34,10 @@ async def resume(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text(f"Devam edilecek bir şey yok!")
+        await message.reply_text(f"Devam edebileceğim şarkı yokki başkan")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** Müziğe devam ediliyor!")
+        await message.reply_text(f"Müziğe devam ediyorum…")
 
 
 @Client.on_message(command("stop") & other_filters)
@@ -45,7 +45,7 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** Bot zaten çalışmıyor!")
+        await message.reply_text(f"Bot zaten çalışmıyorki usta")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -53,7 +53,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"**{BN} :-** Bot kapatıldı tekrar görüşürüüzzz😉❤️!")
+        await message.reply_text(f"Bot kapatıldı tekrar görüşürüüzzz reis seviom seni😉❤️!")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -61,7 +61,7 @@ async def stop(_, message: Message):
 @authorized_users_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** Geçilecek bir parça bulunamadı!")
+        await message.reply_text(f"Geçebileceğim şarkıyı bulamadım abi")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -73,4 +73,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file_path"]
             )
 
-        await message.reply_text(f"**{BN} :-** Diğer parçaya geçildi!")
+        await message.reply_text(f"Diğer parçaya geçtim başkaann😘")
