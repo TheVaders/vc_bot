@@ -21,7 +21,7 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 💠 /stop - __Botu kapatmaya yarar.__
 💠 /song - __Şarkı aratmaya yarar.__
 
-Küçük bir ücret karşılığında grubunuza özel müzik botu yaptırmak için @Zep_Unb ulaşabilirsiniz.
+Küçük bir ücret karşılığında (bağış niteliğinde) grubunuza özel müzik botu yaptırabilirsiniz iletişim için @Zep_Unb ulaşabilirsiniz saygılarımla @Zep_Unb.
 
 🤖 **Developer by @Zep_Unb**
         """,
