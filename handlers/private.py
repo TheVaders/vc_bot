@@ -12,13 +12,16 @@ async def start(_, message: Message):
 
 Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 
-Kullanma kılavuzu:
-💠 /play - __Parçayı oynatmaya yarar.__
-💠 /pause - __Botu durdurmaya yarar.__
+          📜Kullanma Kılavuzu📜
+
+💠 /play - __Parçayı oynatır.__
+💠 /pause - __Botu durdurur.__
 💠 /resume - __Botu devam ettirmeye yarar.__
 💠 /skip - __Diğer şarkıya geçmeye yarar.__
 💠 /stop - __Botu kapatmaya yarar.__
-💠 /song - __Şarkı aramaya yarar.__
+💠 /song - __Şarkı aratmaya yarar.__
+
+Küçük bir ücret karşılığında grubunuza özel müzik botu yaptırmak için @Zep_Unb ulaşabilirsiniz.
 
 🤖 **Developer by @Zep_Unb**
         """,
