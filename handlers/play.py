@@ -24,7 +24,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"Video uzunluğu {DURATION_LIMIT} dakikayı geçmemeli abi\n"
+                f"__Video uzunluğu {DURATION_LIMIT} dakikayı geçmemeli__\n"
             )
 
         file_name = get_file_name(audio)
@@ -35,10 +35,10 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await message.reply_text(f"Oynatılacak bişi yok reis🤗")
+        return await message.reply_text(f"__Oynatılacak bişi bulamadım abi__🤗")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"Müziği başarıyla #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} sıraya ekledim operasyon başarılı usta👍")
+        await message.reply_text(f"__Müziği başarıyla #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} sıraya ekledim__")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_text(f"Oynatılıyor..")
+        await message.reply_text(f"__Oynatılıyor…__")
