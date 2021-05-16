@@ -21,7 +21,7 @@ __Sesli sohbetlerde müzik dinlemenize olanak sağlarım.__
 💠 /stop - __Botu kapatır.__
 💠 /song - __Şarkı aratır.__
 
-**Küçük bir ücret karşılığında (bağış niteliğinde) grubunuza özel müzik botu yaptırabilirsiniz detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
+**Grubunuza özel müzik botu yaptırabilirsiniz. Detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
 
 🤖 **Developer by @Zep_Unb**
         """,
@@ -29,10 +29,10 @@ __Sesli sohbetlerde müzik dinlemenize olanak sağlarım.__
             [
                 [
                     InlineKeyboardButton(
-                        "Sohbet Grubumuz💬", url="https://t.me/DepressionalistChat"
+                        "Sohbet Grubumuz💬", url="https://t.me/ZeroKeyStore"
                     ),
                     InlineKeyboardButton(
-                        "Kanalımız 📣", url="https://t.me/Depressionalist"
+                        "Özel Bot Yaptırmak İçin", url="https://t.me/Zep_Unb"
                     )
                 ]
             ]
