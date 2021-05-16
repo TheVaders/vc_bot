@@ -45,7 +45,7 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"`Bot zaten çalışmıyor usta`")
+        await message.reply_text(f"`Bot zaten çalışmıyor usta🤷‍♂`")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
