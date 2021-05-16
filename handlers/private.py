@@ -10,18 +10,18 @@ async def start(_, message: Message):
     await message.reply_text(
         f"""Selam Ben **{bn}**
 
-Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
+__Sesli sohbetlerde müzik dinlemenize olanak sağlarım.__
 
-          📜Kullanma Kılavuzu📜
+          **📜Kullanma Kılavuzu📜**
 
-💠 /play - __Parçayı oynatır.__
-💠 /pause - __Botu durdurur.__
-💠 /resume - __Botu devam ettirmeye yarar.__
-💠 /skip - __Diğer şarkıya geçmeye yarar.__
-💠 /stop - __Botu kapatmaya yarar.__
-💠 /song - __Şarkı aratmaya yarar.__
+💠 /play - __Şarkıyı oynatır.__
+💠 /pause - __Şarkıyı durdurur.__
+💠 /resume - __Şarkıyı devam ettirir.__
+💠 /skip - __Diğer şarkıya geçer.__
+💠 /stop - __Botu kapatır.__
+💠 /song - __Şarkı aratır.__
 
-Küçük bir ücret karşılığında (bağış niteliğinde) grubunuza özel müzik botu yaptırabilirsiniz iletişim için @Zep_Unb ulaşabilirsiniz saygılarımla @Zep_Unb.
+**Küçük bir ücret karşılığında (bağış niteliğinde) grubunuza özel müzik botu yaptırabilirsiniz detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
 
 🤖 **Developer by @Zep_Unb**
         """,
