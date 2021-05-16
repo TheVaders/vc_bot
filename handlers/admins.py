@@ -37,7 +37,7 @@ async def resume(_, message: Message):
         await message.reply_text(f"`Devam edebileceğim şarkı yok reis`")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text(f"`Müziğe devam ediliyor…`")
+        await message.reply_text(f"`Müziğe devam ediliyor...`")
 
 
 @Client.on_message(command("stop") & other_filters)
@@ -53,7 +53,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"`Bot kapatıldı tekrar görüşürüüzzz seviom seni😉❤️!`")
+        await message.reply_text(f"`Bot kapatıldı! Görüşürüüzzz😉❤️!`")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -73,4 +73,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file_path"]
             )
 
-        await message.reply_text(f"`Diğer şarkıya geçildi…`")
+        await message.reply_text(f"`Diğer şarkıya geçildi...`")
