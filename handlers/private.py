@@ -23,7 +23,7 @@ __Sesli sohbetlerde müzik dinlemenize olanak sağlarım.__
 
 **Grubunuza özel müzik botu yaptırabilirsiniz. Detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
 
-🤖 **Developer by @Zep_Unb**
+🤖 **@Zep_Unb tarafından @ZeroKeyStore grubuna özel kodlanmıştır.**
         """,
         reply_markup=InlineKeyboardMarkup(
             [
