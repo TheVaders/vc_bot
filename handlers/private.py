@@ -21,7 +21,18 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 💠 /stop - Botu kapatır.
 💠 /song - Şarkı aratır.
 
-Grubunuza özel müzik botu yaptırmak için @MoolRehber kanalına göz atabilirsiniz.
-
-🤖 @Zep_Unb tarafından Kartexle özel hazırlanmıştır.
-        ""
+🤖 @Zep_Unb tarafından Kartex'e özel hazırlanmıştır.
+        """,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Bot Sahibi", url="https://t.me/@kartex10711453"
+                    ),
+                    InlineKeyboardButton(
+                        "Bot Yaptırmak İçin", url="https://t.me/MoolRehber"
+                    )
+                ]
+            ]
+        )
+    ) 
