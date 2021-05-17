@@ -21,13 +21,13 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 💠 /stop - Botu kapatır.
 💠 /song - Şarkı aratır.
 
-🤖 @Zep_Unb katkılarıyla Kartex'e hazırlanmıştır.
+🤖 @Zep_Unb tarafından @AtAvratCheesecake grubuna özel kodlanmıştır.
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Bot Sahibi", url="https://t.me/kartex10711453"
+                        "Sohbet Grubumuz", url="https://t.me/AtAvratCheesecake"
                     ),
                     InlineKeyboardButton(
                         "Bot Yaptırmak İçin", url="https://t.me/MoolRehber"
