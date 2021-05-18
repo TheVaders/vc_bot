@@ -15,24 +15,24 @@ from config import BOT_NAME as bn, PLAY_PIC
 
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
-    hell_pic = PLAY_PIC
-    hell = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
+    DEXTER_pic = PLAY_PIC
+    DEXTER = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
     butts = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "Group 💬", url="https://t.me/Its_Fuckin_Hell"
+                    "Group 💬", url="https://t.me/DEXTERS_ARMY"
                 ),
                 InlineKeyboardButton(
-                    "Channel 📣", url="https://t.me/The_HellBot"
+                    "Channel 📣", url="https://t.me/About_itsmeher"
                 )
             ]
         ]
     )
     await message.reply_photo(
-    photo=hell_pic,
+    photo=DEXTER_pic,
     reply_markup=butts,
-    caption=hell,
+    caption=DEXTER,
 )
 
 
@@ -48,10 +48,10 @@ Happy Streaming 😉
             [
                 [
                     InlineKeyboardButton(
-                        "Repo 📑", url="https://github.com/TheVaders/vc_bot"
+                        "Repo 📑", url="https://github.com/TheVader/vc_bot"
                     ),
                     InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/The_HellBot"
+                        "Channel 📣", url="https://t.me/ABOUT_itsmedexter"
                     ),
                     InlineKeyboardButton (
                         "Tutorial 🎬", url="https://youtu.be/XaH7VHURBVg"
@@ -64,9 +64,9 @@ Happy Streaming 😉
 
 @Client.on_message(command("ping") & other_filters)
 async def ping(_, message: Message):
-    hell_pic = PLAY_PIC
+    DEXTER_pic = PLAY_PIC
     await message.reply_photo(
-    photo=hell_pic,
+    photo=DEXTER_pic,
     caption="I'm Alive and working fine. Do /help to get commands.\n\nHappy Streaming Music 😉",
 )
 
