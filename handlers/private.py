@@ -21,18 +21,20 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 💠 /stop - Botu kapatır.
 💠 /song - Şarkı aratır.
 
-🤖 @Zep_Unb tarafından @AtAvratCheesecake grubuna özel kodlanmıştır.
+**Küçük bir ücret karşılığında grubunuza özel müzik botu yaptırabilirsiniz. Detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
+
+🤖 Developer by @Zep_Unb
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Sohbet Grubumuz", url="https://t.me/AtAvratCheesecake"
+                        "Sohbet Grubumuz💬", url="https://t.me/DepressionalistChat"
                     ),
                     InlineKeyboardButton(
-                        "Bot Yaptırmak İçin", url="https://t.me/MoolRehber"
+                        "Kanalımız 📣", url="https://t.me/Depressionalist"
                     )
                 ]
             ]
         )
-    ) 
+    )merhaba 
