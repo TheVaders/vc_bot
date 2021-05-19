@@ -37,4 +37,4 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
                 ]
             ]
         )
-    )merhaba 
+    )
