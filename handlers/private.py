@@ -16,15 +16,15 @@ from config import BOT_NAME as bn, PLAY_PIC
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
     hell_pic = PLAY_PIC
-    hell = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
+    hell = f"I am **{bn}** !!\nI am disney team  play music bot I Can play Music  in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
     butts = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "Group 💬", url="https://t.me/Its_Fuckin_Hell"
+                    "Group 💬", url="https://t.me/disneyteamchat"
                 ),
                 InlineKeyboardButton(
-                    "Channel 📣", url="https://t.me/The_HellBot"
+                    "Channel 📣", url="https://t.me/disneygrou"
                 )
             ]
         ]
@@ -40,7 +40,7 @@ async def start(_, message: Message):
 async def repo(_, message: Message):
     await message.reply_text(
         f"""🤠 Hoi!!
-I'm **{bn}** and below is the my source code 🙃
+I'm **{bn}** and below is the my Developer 🙃
 
 Happy Streaming 😉
 """,
@@ -48,13 +48,13 @@ Happy Streaming 😉
             [
                 [
                     InlineKeyboardButton(
-                        "Repo 📑", url="https://github.com/TheVaders/vc_bot"
+                        "👨‍💻Developer👨‍💻", url="https://t.me/doreamonfans1"
                     ),
                     InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/The_HellBot"
+                        "Channel 📣", url="https://t.me/disneygrou"
                     ),
                     InlineKeyboardButton (
-                        "Tutorial 🎬", url="https://youtu.be/XaH7VHURBVg"
+                        "Support💭", url="https://t.me/disneyteamchat"
                     )
                 ]
             ]
