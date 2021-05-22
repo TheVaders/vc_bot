@@ -16,7 +16,6 @@ The commands I currently support are:
 ⚜️ /play - **[ Groups Only ]** > __Plays the replied audio file or YouTube video through link.__
 ⚜️ /song - **[ Groups & DM ]** > __Uploads the searched song in the chat.__
 ⚜️ /ytplay - **[ Groups Only ]** > __Plays the song directly from YouTube Search.__
-⚜️ /repo - **[ DM Only ]** > __Gets the source code and YouTube Tutorial Video.__
 
 
 🔰 **Admin & Sudo Users Commands :**
