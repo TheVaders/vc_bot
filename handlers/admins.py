@@ -22,7 +22,7 @@ async def durdur(_, message: Message):
         await message.reply_text(f"`Durdurulacak içerik bulunamadı!`")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text(f"`Parça durduruldu`")
+        await message.reply_text(f"`Parça durduruldu!`")
 
 
 @Client.on_message(command("devam") & other_filters)
@@ -53,7 +53,7 @@ async def kapat(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"`Bot kapatıldı!`")
+        await message.reply_text(f"`Bot kapatıldı.`")
 
 
 @Client.on_message(command("gec") & other_filters)
