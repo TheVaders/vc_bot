@@ -24,7 +24,7 @@ async def inline(client: Client, query: InlineQuery):
             answers.append(
                 InlineQueryResultArticle(
                     title=result["title"],
-                    description="{}, {} views.".format(
+                    description="{}, {} izlenme.".format(
                         result["duration"],
                         result["viewCount"]["short"]
                     ),
