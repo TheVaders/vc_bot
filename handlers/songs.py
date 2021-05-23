@@ -19,7 +19,7 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     okvai = query.capitalize()
     print(query.capitalize())
-    m = await message.reply(f"{okvai} `Adlı parçayı arıyorum...`")
+    m = await message.reply(f"{okvai} `Adlı parça aranıyor...`")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
