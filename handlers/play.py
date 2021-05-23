@@ -41,4 +41,4 @@ async def play(_, message: Message):
         await message.reply_text(f"Müziği başarıyla #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} sıraya ekledim")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_text(f"Oynatılıyor...")
+        await message.reply_text(f"`Oynatılıyor...`")
