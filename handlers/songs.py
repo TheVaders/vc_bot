@@ -11,7 +11,7 @@ from config import BOT_NAME as Bn
 from helpers.filters import command, other_filters
 from helpers.decorators import errors
 
-@Client.on_message(command("song") & other_filters)
+@Client.on_message(command("sarkiara") & other_filters)
 @errors
 async def a(client, message: Message):
     query = ''
@@ -19,7 +19,7 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     okvai = query.capitalize()
     print(query.capitalize())
-    m = await message.reply(f"{okvai} Adlı parçayı arıyorum…")
+    m = await message.reply(f"{okvai} `Adlı parçayı arıyorum...`")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -48,15 +48,15 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"Aradığın şarkıyı bulamadım abi özür dilerim😢\n\n{e}")
+            m.edit(f"`Aradığınız şarkı bulunamadı.\n\n{e}`")
             return
     except Exception as e:
         m.edit(
-           f"Aradığın şarkıyı bulamadım abi\n\nYazıyı değiştirerek tekrar dene."
+           f"`Aradığınız şarkı bulunamadı. \n\nYazıyı değiştirerek tekrar deneyin.`"
         )
         print(str(e))
         return
-    await m.edit(f"`{query}` Adlı parça yükleniyor…")
+    await m.edit(f"`{query}` `Adlı parça yükleniyor...`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -70,7 +70,7 @@ async def a(client, message: Message):
         await  message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         await m.delete()
     except Exception as e:
-        m.edit(f"❌ Error!! \n\n{e}")
+        m.edit(f"Hata! \n\n{e}")
     try:
         os.remove(audio_file)
         os.remove(thumb_name)
