@@ -10,16 +10,16 @@ async def start(_, message: Message):
     await message.reply_text(
         f"""Selam Ben {bn}
 
-Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
+Ülkeme özel kodlanmış sohbetlerde müzik dinlemenize olanak sağlarım.
 
           📜Kullanma Kılavuzu📜
 
-💠 /play - Şarkıyı oynatır.
-💠 /pause - Şarkıyı durdurur.
-💠 /resume - Şarkıyı devam ettirir.
-💠 /skip - Diğer şarkıya geçer.
-💠 /stop - Botu kapatır.
-💠 /song - Şarkı aratır.
+💠 /oynat - Şarkıyı oynatır.
+💠 /durdur - Şarkıyı durdurur.
+💠 /devam - Şarkıyı devam ettirir.
+💠 /gec - Diğer şarkıya geçer.
+💠 /kapat - Botu kapatır.
+💠 /sarkiara - Şarkı aratır.
 
 **Küçük bir ücret karşılığında grubunuza özel müzik botu yaptırabilirsiniz. Detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
 
@@ -29,10 +29,10 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
             [
                 [
                     InlineKeyboardButton(
-                        "Sohbet Grubumuz💬", url="https://t.me/DepressionalistChat"
+                        "Sahip İletişim", url="https://t.me/Zep_Unb"
                     ),
                     InlineKeyboardButton(
-                        "Kanalımız 📣", url="https://t.me/Depressionalist"
+                        "Destek Kanalı", url="https://t.me/MoolRehber"
                     )
                 ]
             ]
