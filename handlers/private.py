@@ -29,10 +29,10 @@ Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
             [
                 [
                     InlineKeyboardButton(
-                        "Sahip İletişim", url="https://t.me/Zep_Unb"
+                        "Sohbet Grubumuz", url="https://t.me/AtAvratCheesecake"
                     ),
                     InlineKeyboardButton(
-                        "Destek Kanalı", url="https://t.me/TurkishMusicDestek"
+                        "Grubunuza Özel Bot Yaptırmak İçin", url="https://t.me/MoolRehber"
                     )
                 ]
             ]
