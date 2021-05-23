@@ -10,10 +10,10 @@ from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
 
 
-@Client.on_message(command("pause") & other_filters)
+@Client.on_message(command("durdur") & other_filters)
 @errors
 @authorized_users_only
-async def pause(_, message: Message):
+async def durdur(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
@@ -25,10 +25,10 @@ async def pause(_, message: Message):
         await message.reply_text(f"`Müziği durdurdum reis`")
 
 
-@Client.on_message(command("resume") & other_filters)
+@Client.on_message(command("devam") & other_filters)
 @errors
 @authorized_users_only
-async def resume(_, message: Message):
+async def devam(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
@@ -36,14 +36,14 @@ async def resume(_, message: Message):
     ):
         await message.reply_text(f"`Devam edebileceğim şarkı yok reis`")
     else:
-        callsmusic.pytgcalls.resume_stream(message.chat.id)
+        callsmusic.pytgcalls.devam_stream(message.chat.id)
         await message.reply_text(f"`Müziğe devam ediliyor...`")
 
 
-@Client.on_message(command("stop") & other_filters)
+@Client.on_message(command("kapat") & other_filters)
 @errors
 @authorized_users_only
-async def stop(_, message: Message):
+async def kapat(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
         await message.reply_text(f"`Bot zaten çalışmıyor usta🤷‍♂`")
     else:
