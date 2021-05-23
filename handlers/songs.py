@@ -19,7 +19,7 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     okvai = query.capitalize()
     print(query.capitalize())
-    m = await message.reply(f"{okvai} `Adlı parça aranıyor...`")
+    m = await message.reply(f"`{okvai}` __adlı parça aranıyor...__")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -56,7 +56,7 @@ async def a(client, message: Message):
         )
         print(str(e))
         return
-    await m.edit(f"`{query}` `Adlı parça yükleniyor...`")
+    await m.edit(f"`{query}` __adlı parça yükleniyor...__")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
