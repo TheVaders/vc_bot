@@ -19,10 +19,10 @@ async def durdur(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text(f"`Durdurulacak bir şey bulamadım usta`")
+        await message.reply_text(f"`Durdurulacak içerik bulunamadı!`")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text(f"`Müziği durdurdum reis`")
+        await message.reply_text(f"`Parça durduruldu`")
 
 
 @Client.on_message(command("devam") & other_filters)
@@ -34,7 +34,7 @@ async def devam(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text(f"`Devam edebileceğim şarkı yok reis`")
+        await message.reply_text(f"`Devam edilecek içerik bulunamadı!`")
     else:
         callsmusic.pytgcalls.devam_stream(message.chat.id)
         await message.reply_text(f"`Müziğe devam ediliyor...`")
@@ -45,7 +45,7 @@ async def devam(_, message: Message):
 @authorized_users_only
 async def kapat(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"`Bot zaten çalışmıyor usta🤷‍♂`")
+        await message.reply_text(f"`Bot zaten çalışmıyor.`")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -53,15 +53,15 @@ async def kapat(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"`Bot kapatıldı! Görüşürüüzzz😉❤️!`")
+        await message.reply_text(f"`Bot kapatıldı!`")
 
 
-@Client.on_message(command("geç") & other_filters)
+@Client.on_message(command("gec") & other_filters)
 @errors
 @authorized_users_only
 async def geç(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"`Geçebileceğim bir şarkı yok başkan`")
+        await message.reply_text(f"`Atlanacak şarkı bulunamadı!`")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
