@@ -10,9 +10,9 @@ async def start(_, message: Message):
     await message.reply_text(
         f"""Selam! Ben {bn}
 
-__Ülkeme özel kodlanmış, sesli sohbetlerde müzik dinlemenize olanak sağlayan müzik botuyum.__
+__Ülkeme özel kodlanmış, sesli sohbetlerde müzik dinlemenize olanak sağlayan müzik botuyum. @TurkishDjBot ile birlikte çalışırım.__
 
-      📜Botun Kullanma Kılavuzu📜
+         📜Kullanma Kılavuzu📜
 
 💠 /oynat - Şarkıyı oynatır.
 💠 /durdur - Şarkıyı durdurur.
