@@ -36,7 +36,7 @@ async def devam(_, message: Message):
     ):
         await message.reply_text(f"`Devam edilecek içerik bulunamadı!`")
     else:
-        callsmusic.pytgcalls.devam_stream(message.chat.id)
+        callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_text(f"`Müziğe devam ediliyor...`")
 
 
