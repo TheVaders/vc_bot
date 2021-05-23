@@ -56,10 +56,10 @@ async def kapat(_, message: Message):
         await message.reply_text(f"`Bot kapatıldı! Görüşürüüzzz😉❤️!`")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("geç") & other_filters)
 @errors
 @authorized_users_only
-async def skip(_, message: Message):
+async def geç(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
         await message.reply_text(f"`Geçebileceğim bir şarkı yok başkan`")
     else:
