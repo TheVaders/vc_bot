@@ -8,11 +8,11 @@ from helpers.filters import other_filters2
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""Selam Ben {bn}
+        f"""Selam! Ben {bn}
 
-Ülkeme özel kodlanmış sohbetlerde müzik dinlemenize olanak sağlarım.
+Ülkeme özel kodlanmış, sesli sohbetlerde müzik dinlemenize olanak sağlayan müzik botuyum.
 
-          📜Kullanma Kılavuzu📜
+          📜Botun Kullanma Kılavuzu📜
 
 💠 /oynat - Şarkıyı oynatır.
 💠 /durdur - Şarkıyı durdurur.
@@ -21,9 +21,7 @@ async def start(_, message: Message):
 💠 /kapat - Botu kapatır.
 💠 /sarkiara - Şarkı aratır.
 
-**Küçük bir ücret karşılığında grubunuza özel müzik botu yaptırabilirsiniz. Detaylı bilgi için @MoolRehber kanalına göz atabilirsiniz.**
-
-🤖 Developer by @Zep_Unb
+**Grubunuza özel müzik botu yaptırmak için sahibim ile iletişime geçebilirsiniz.**
         """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -32,7 +30,7 @@ async def start(_, message: Message):
                         "Sahip İletişim", url="https://t.me/Zep_Unb"
                     ),
                     InlineKeyboardButton(
-                        "Destek Kanalı", url="https://t.me/MoolRehber"
+                        "Destek Kanalı", url="https://t.me/TurkishMusicDestek"
                     )
                 ]
             ]
