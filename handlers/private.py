@@ -8,18 +8,20 @@ from helpers.filters import other_filters2
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""Selam! Ben {bn}
+        f"""Selam Ben {bn}
 
-__Ülkeme özel kodlanmış, sesli sohbetlerde müzik dinlemenize olanak sağlayan müzik botuyum. @TurkishSolist botu ile birlikte çalışırım.__
+Sesli sohbetlerde müzik dinlemenize olanak sağlarım.
 
-         📜Kullanma Kılavuzu📜
+          📜Kullanma Kılavuzu📜
 
-💠 /oynat - Şarkıyı oynatır.
-💠 /durdur - Şarkıyı durdurur.
-💠 /devam - Şarkıyı devam ettirir.
-💠 /gec - Diğer şarkıya geçer.
-💠 /kapat - Botu kapatır.
-💠 /sarkiara - Şarkı aratır.
+💠 /play - Şarkıyı oynatır.
+💠 /pause - Şarkıyı durdurur.
+💠 /resume - Şarkıyı devam ettirir.
+💠 /skip - Diğer şarkıya geçer.
+💠 /stop - Botu kapatır.
+💠 /song - Şarkı aratır.
+
+🤖 @Zep_Unb tarafından @AtAvratCheesecake grubuna özel kodlanmıştır.
 
 **Grubunuza özel müzik botu yaptırmak için sahibim ile iletişime geçebilirsiniz.**
         """,
