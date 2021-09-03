@@ -15,8 +15,8 @@ from config import BOT_NAME as bn, PLAY_PIC
 
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
-    hell_pic = PLAY_PIC
-    hell = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
+    CYBER_pic = PLAY_PIC
+    CYBER = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
     butts = InlineKeyboardMarkup(
         [
             [
@@ -30,9 +30,9 @@ async def start(_, message: Message):
         ]
     )
     await message.reply_photo(
-    photo=hell_pic,
+    photo=CYBER_pic,
     reply_markup=butts,
-    caption=hell,
+    caption=CYBER,
 )
 
 
@@ -64,9 +64,9 @@ Happy Streaming 😉
 
 @Client.on_message(command("ping") & other_filters)
 async def ping(_, message: Message):
-    hell_pic = PLAY_PIC
+    CYBER_pic = PLAY_PIC
     await message.reply_photo(
-    photo=hell_pic,
+    photo=CYBER_pic,
     caption="I'm Alive and working fine. Do /help to get commands.\n\nHappy Streaming Music 😉",
 )
 
